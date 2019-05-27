@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kai-RU-tAQ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Smash Bros -->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sCW-Ce-pP1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sCW-Ce-pP1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KBJ-mW-I10"/>
+                            <constraint firstItem="sCW-Ce-pP1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OGx-BS-139"/>
+                            <constraint firstItem="sCW-Ce-pP1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lPS-b3-Q95"/>
+                            <constraint firstItem="sCW-Ce-pP1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uCa-nL-6Pn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Smash List" id="PN8-CQ-i2M"/>
+                    <navigationItem key="navigationItem" title="Smash Bros " id="wq1-Zg-zAl"/>
+                    <connections>
+                        <outlet property="SmashBar" destination="PN8-CQ-i2M" id="YQD-hD-KB1"/>
+                        <outlet property="tableView" destination="sCW-Ce-pP1" id="Hfu-Po-iqa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688.40579710144937" y="-37.5"/>
+        </scene>
+        <!--Characters-->
+        <scene sceneID="Fdw-rc-okn">
+            <objects>
+                <viewController id="ZPK-qg-tze" customClass="HPViewController" customModule="TrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tTJ-3h-3dR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VEX-2l-c6w">
+                                <rect key="frame" x="0.0" y="128" width="414" height="685"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4SA-Zl-YHv">
+                                    <size key="itemSize" width="175" height="252"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HPCell" id="Z64-2A-raF">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="252"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="175" height="252"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZPK-qg-tze" id="qyu-yY-6CL"/>
+                                    <outlet property="delegate" destination="ZPK-qg-tze" id="JRK-L4-dOl"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WKg-Cu-9la"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Characters" id="bEq-rv-FNE"/>
+                    <connections>
+                        <outlet property="collecView" destination="VEX-2l-c6w" id="HaV-5A-iN9"/>
+                        <segue destination="uUr-J6-oJE" kind="show" identifier="hpDetails" id="731-PM-BD9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1i8-Jw-0ZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1597.1014492753625" y="-686.38392857142856"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="RsQ-bc-rHi">
+            <objects>
+                <viewController storyboardIdentifier="HPDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uUr-J6-oJE" customClass="HPDetailsViewController" customModule="TrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jy7-6G-tFh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqj-Nr-50v">
+                                <rect key="frame" x="94" y="488" width="227" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ON-Ra-AXh">
+                                <rect key="frame" x="94" y="538" width="227" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sg-Z6-iyr">
+                                <rect key="frame" x="51" y="350" width="313" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wand" translatesAutoresizingMaskIntoConstraints="NO" id="jg4-ka-JiC">
+                                <rect key="frame" x="266" y="674" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="286-pF-SDJ"/>
+                                    <constraint firstAttribute="width" constant="128" id="Clw-Lx-F3m"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzV-cu-2Jn">
+                                <rect key="frame" x="20" y="764" width="195" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="actorButton:" destination="uUr-J6-oJE" eventType="touchUpInside" id="bhA-db-jCK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d13-94-Mkw">
+                                <rect key="frame" x="94" y="435" width="227" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gqq-hD-NDT">
+                                <rect key="frame" x="110" y="101" width="194" height="241"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q9i-nG-BR5" firstAttribute="trailing" secondItem="jg4-ka-JiC" secondAttribute="trailing" constant="20" id="Smx-ry-fU2"/>
+                            <constraint firstItem="Q9i-nG-BR5" firstAttribute="bottom" secondItem="jg4-ka-JiC" secondAttribute="bottom" constant="11" id="wbr-fv-wVW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Q9i-nG-BR5"/>
+                    </view>
+                    <connections>
+                        <outlet property="actorButton" destination="NzV-cu-2Jn" id="8OG-A2-Vmd"/>
+                        <outlet property="ancestralLabel" destination="2ON-Ra-AXh" id="oVV-YV-5Vn"/>
+                        <outlet property="birthLabel" destination="d13-94-Mkw" id="N5V-GN-ar5"/>
+                        <outlet property="charImage" destination="Gqq-hD-NDT" id="N5t-xh-Qe3"/>
+                        <outlet property="charLabel" destination="2sg-Z6-iyr" id="SUJ-eQ-Vl3"/>
+                        <outlet property="houseLabel" destination="bqj-Nr-50v" id="peb-Is-mbB"/>
+                        <outlet property="wandImage" destination="jg4-ka-JiC" id="roN-jy-UCU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IzF-Nd-1Va" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2418.840579710145" y="-686.38392857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ay6-gm-KbU">
+            <objects>
+                <tabBarController id="kai-RU-tAQ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pGg-jM-Ofl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Xz2-EO-1Pn" kind="relationship" relationship="viewControllers" id="iXh-RP-qeE"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Uge-b2-6VS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TLz-Kk-fnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-227" y="-408"/>
+        </scene>
+        <!--Harry Potter Collection-->
+        <scene sceneID="EJc-ec-iOL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xz2-EO-1Pn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Harry Potter Collection" id="6Ij-mU-uQ7">
+                        <color key="badgeColor" red="0.98564618825912476" green="0.16990245735839929" blue="0.17776783277036798" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nEq-IA-Z7E">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZPK-qg-tze" kind="relationship" relationship="rootViewController" id="yOZ-A1-tio"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWl-XF-jwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686.95652173913049" y="-686.38392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wand" width="225" height="225"/>
+    </resources>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

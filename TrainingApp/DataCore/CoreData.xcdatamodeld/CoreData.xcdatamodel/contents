@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Char" representedClassName="Char" syncable="YES" codeGenerationType="class">
+        <attribute name="actorData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ancestryData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateOfBirthData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="houseData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameData" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="house" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CharHouse" inverseName="char" inverseEntity="CharHouse" syncable="YES"/>
+    </entity>
+    <entity name="CharHouse" representedClassName="CharHouse" syncable="YES" codeGenerationType="class">
+        <attribute name="houseData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameData" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="char" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Char" inverseName="house" inverseEntity="Char" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Char" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="CharHouse" positionX="-320.75" positionY="-14.078125" width="128" height="88"/>
+    </elements>
+</model>
